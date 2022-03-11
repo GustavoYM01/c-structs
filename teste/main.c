@@ -118,4 +118,27 @@ main()
 //            printf("Numero da matricula: %d\n\n", da.numMatr);
 //            printf("Curso: %s\n\n", da.curso);
 //        }
+
+//      EXERCÍCIO 3 MELHORADO
+
+        struct dadosAluno da[5];
+
+        for(int i = 0; i < 2; i++){
+            printf("\nDigite o nome do %d° aluno: \n", (i+1));
+            fflush(stdin);
+            gets(da[i].nomeAluno);
+
+            printf("\nDigite o n° da matricula do %d° aluno: \n", (i+1));
+            scanf("%d", &da[i].numMatr);
+
+            printf("\nE por fim, digite o nome do curso do %d aluno: \n", (i+1));
+            fflush(stdin);
+            gets(da[i].curso);
+        }
+
+        for(int i = 0; i < 2; i++) {
+            printf("Aluno: %s\n\n", da[i].nomeAluno);
+            printf("Numero da matricula: %d\n\n", da[i].numMatr);
+            printf("Curso: %s\n\n", da[i].curso);
+        }
 }
